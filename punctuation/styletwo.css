@@ -1,0 +1,45 @@
+body {
+    margin:0;
+      padding:0;  
+      background-color: black;
+      color: green;
+      font-size: 20px;
+      font-family: vox-round, sans-serif;
+      font-weight: 300;
+      font-style: italic;
+       border: 5px solid white;
+      margin-top: 90px;
+      margin-bottom: 90px;
+      margin-right: 90px;
+      margin-left: 80px;
+      box-shadow: 0 20px 50px rgba(70, 175, 57 );
+    }
+    
+    #scroll_news{
+    color: white;
+    font-size: 60px;
+    text-shadow: 2px 2px #90EE90;
+    }
+    
+    .title{
+      color:#ffffff;
+      font-size:75px;
+      text-align:center;
+      color: rgba( 145, 178, 141);
+      text-shadow: 0 20px 50px rgba(70, 175, 57 );
+    }
+    
+    .footer {
+       position: relative;
+       font-size: 30px;
+      text-decoration:none;
+      border-radius:50px;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: rgba(70, 175, 57 );
+      box-shadow: 0 20px 50px pink;
+       color: black;
+       text-align: center;
+      
+    }
