@@ -3,7 +3,6 @@
 const airtableApiKey = "keyWiYmFGHrXf4AYb";
 const tableUrl = "https://api.airtable.com/v0/appoo0Z7WkXt9Jrsq/Table%201";
 
-
 const authenticatedUrl = tableUrl + "?api_key=" + airtableApiKey;
 
 
@@ -79,4 +78,32 @@ chatFormElement.addEventListener('submit', (event) => {
     containerDiv.appendChild(timeElement)
     containerDiv.appendChild(textElement)
     chatMessagesContainerElement.appendChild(containerDiv)
+
+    // Submit Chat Message to Airtable Database
+    const fetchPostPromise = fetch(authenticatedUrl, {
+        method: 'POST', 
+        body: JSON.stringify({
+            records: [{
+                fields: {
+                    meta:  "Username",
+                    time: "10:38",
+                    texts: chatMessage
+                }
+            }]
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    fetchPostPromise.then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+    // End Submit Chat Message to Airtable Database
 })
