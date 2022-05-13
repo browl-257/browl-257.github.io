@@ -105,5 +105,6 @@ chatFormElement.addEventListener('submit', (event) => {
     .catch((error) => {
         console.log(error)
     })
+    
     // End Submit Chat Message to Airtable Database
 })
